@@ -31,6 +31,7 @@ gem 'pg'
 gem 'grape'
 
 gem 'capistrano', "2.15.5"
+gem 'therubyracer', platforms: :ruby
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
