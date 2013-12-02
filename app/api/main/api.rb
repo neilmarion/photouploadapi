@@ -24,16 +24,24 @@ module Main
 
         # This is the kind of File object Grape understands so let's
         # pass the hash to it
-        photo.avatar = ActionDispatch::Http::UploadedFile.new(attachment)
+        #photo.avatar = ActionDispatch::Http::UploadedFile.new(attachment)
 
         # easy
-        photo.avatar_path = attachment[:filename]
+        #photo.avatar_path = attachment[:filename]
 
         # even easier
-        photo.name = "dummy name"
+        #photo.name = "dummy name"
 
-        # and...
-        user.save
+
+        raw_parameters = {
+          :avatar => ActionDispatch::Http::UploadedFile.new(attachment),
+          :name => "picture",
+          :avatar_path => attachment[:filename]
+        }
+
+        parameters = ActionController::Parameters.new(raw_parameters)
+        photo = Photo.create(parameters.permit(:avatar, :name, :avatar_path))
+
       end
     end
 
