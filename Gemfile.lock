@@ -32,6 +32,12 @@ GEM
       ice_nine (~> 0.9)
     backports (3.3.5)
     builder (3.1.4)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -61,6 +67,7 @@ GEM
       rack-mount
       virtus (>= 1.0.0)
     hashie (2.0.5)
+    highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.5)
     ice_nine (0.10.0)
@@ -78,6 +85,13 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_xml (0.5.5)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -149,6 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano (= 2.15.5)
   coffee-rails (~> 4.0.0)
   grape
   jbuilder (~> 1.2)
