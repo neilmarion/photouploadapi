@@ -5,4 +5,4 @@ production:
   database: photouploadapi
   pool: 5
   username: 
-  password:
+  password: 
